@@ -45,6 +45,7 @@
 		F9C6F20226EBD93400D2B371 /* RedmineClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C6F20626EBD93400D2B371 /* RedmineClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientUITests.swift; sourceTree = "<group>"; };
 		F9C6F20826EBD93400D2B371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C6F21426EBD9D500D2B371 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 				F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */,
 				F9C6F1F226EBD93400D2B371 /* Info.plist */,
 				F9C6F1EF26EBD93400D2B371 /* Preview Content */,
+				F9C6F21426EBD9D500D2B371 /* README.md */,
 			);
 			path = RedmineClient;
 			sourceTree = "<group>";
