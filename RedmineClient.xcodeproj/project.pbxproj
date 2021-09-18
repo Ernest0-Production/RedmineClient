@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F913EAD126F6828C0022C19A /* ApiRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD026F6828C0022C19A /* ApiRequestBuilder.swift */; };
 		F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */; };
 		F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1EB26EBD93400D2B371 /* ContentView.swift */; };
 		F9C6F1EE26EBD93400D2B371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F913EAD026F6828C0022C19A /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		F9C6F1E626EBD93400D2B371 /* RedmineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientApp.swift; sourceTree = "<group>"; };
 		F9C6F1EB26EBD93400D2B371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				F9C6F1F226EBD93400D2B371 /* Info.plist */,
 				F9C6F1EF26EBD93400D2B371 /* Preview Content */,
 				F9C6F21426EBD9D500D2B371 /* README.md */,
+				F913EAD026F6828C0022C19A /* ApiRequestBuilder.swift */,
 			);
 			path = RedmineClient;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F913EAD126F6828C0022C19A /* ApiRequestBuilder.swift in Sources */,
 				F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */,
 				F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */,
 			);
