@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F913EAD126F6828C0022C19A /* ApiRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD026F6828C0022C19A /* ApiRequestBuilder.swift */; };
+		F913EAD126F6828C0022C19A /* ApiURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD026F6828C0022C19A /* ApiURLRequest.swift */; };
+		F913EAD326F751610022C19A /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD226F751610022C19A /* ID.swift */; };
+		F913EAD626F7A0630022C19A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD526F7A0630022C19A /* ApiEndpoint.swift */; };
+		F913EAD826F7A0890022C19A /* ApiCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD726F7A0890022C19A /* ApiCredentials.swift */; };
+		F913EADA26F7A0A20022C19A /* ApiEndpoint+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD926F7A0A20022C19A /* ApiEndpoint+Factory.swift */; };
+		F913EADD26F7A0BE0022C19A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EADC26F7A0BE0022C19A /* Models.swift */; };
+		F913EAE226F7BF690022C19A /* AnyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAE126F7BF690022C19A /* AnyDictionary.swift */; };
 		F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */; };
 		F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1EB26EBD93400D2B371 /* ContentView.swift */; };
 		F9C6F1EE26EBD93400D2B371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */; };
@@ -34,7 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F913EAD026F6828C0022C19A /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
+		F913EAD026F6828C0022C19A /* ApiURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiURLRequest.swift; sourceTree = "<group>"; };
+		F913EAD226F751610022C19A /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		F913EAD526F7A0630022C19A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		F913EAD726F7A0890022C19A /* ApiCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCredentials.swift; sourceTree = "<group>"; };
+		F913EAD926F7A0A20022C19A /* ApiEndpoint+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiEndpoint+Factory.swift"; sourceTree = "<group>"; };
+		F913EADC26F7A0BE0022C19A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F913EAE126F7BF690022C19A /* AnyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDictionary.swift; sourceTree = "<group>"; };
 		F9C6F1E626EBD93400D2B371 /* RedmineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientApp.swift; sourceTree = "<group>"; };
 		F9C6F1EB26EBD93400D2B371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F913EAD426F7A0560022C19A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F913EADC26F7A0BE0022C19A /* Models.swift */,
+				F913EAD026F6828C0022C19A /* ApiURLRequest.swift */,
+				F913EAD926F7A0A20022C19A /* ApiEndpoint+Factory.swift */,
+				F913EAD726F7A0890022C19A /* ApiCredentials.swift */,
+				F913EAD526F7A0630022C19A /* ApiEndpoint.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		F913EAE026F7BF610022C19A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F913EAE126F7BF690022C19A /* AnyDictionary.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F9C6F1DD26EBD93400D2B371 = {
 			isa = PBXGroup;
 			children = (
@@ -98,13 +130,15 @@
 		F9C6F1E826EBD93400D2B371 /* RedmineClient */ = {
 			isa = PBXGroup;
 			children = (
+				F913EAE026F7BF610022C19A /* Helpers */,
+				F913EAD426F7A0560022C19A /* Api */,
 				F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */,
 				F9C6F1EB26EBD93400D2B371 /* ContentView.swift */,
 				F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */,
 				F9C6F1F226EBD93400D2B371 /* Info.plist */,
 				F9C6F1EF26EBD93400D2B371 /* Preview Content */,
 				F9C6F21426EBD9D500D2B371 /* README.md */,
-				F913EAD026F6828C0022C19A /* ApiRequestBuilder.swift */,
+				F913EAD226F751610022C19A /* ID.swift */,
 			);
 			path = RedmineClient;
 			sourceTree = "<group>";
@@ -264,9 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F913EAD126F6828C0022C19A /* ApiRequestBuilder.swift in Sources */,
+				F913EAD326F751610022C19A /* ID.swift in Sources */,
+				F913EAD826F7A0890022C19A /* ApiCredentials.swift in Sources */,
+				F913EADA26F7A0A20022C19A /* ApiEndpoint+Factory.swift in Sources */,
+				F913EAE226F7BF690022C19A /* AnyDictionary.swift in Sources */,
+				F913EAD126F6828C0022C19A /* ApiURLRequest.swift in Sources */,
 				F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */,
 				F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */,
+				F913EAD626F7A0630022C19A /* ApiEndpoint.swift in Sources */,
+				F913EADD26F7A0BE0022C19A /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
