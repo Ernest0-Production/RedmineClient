@@ -16,10 +16,7 @@ extension Endpoint {
         case invalidJson(Error)
     }
 
-    func asHTTPRequest(
-        domain: String,
-        credentials: Credentials = .none
-    ) -> Result<HTTPRequest, HTTPRequestBuilderError> {
+    func asHTTPRequest(domain: String) -> Result<HTTPRequest, HTTPRequestBuilderError> {
         Result<Data?, HTTPRequestBuilderError>.create({
             switch task {
             case Endpoint.Task.none, Endpoint.Task.query:
@@ -86,5 +83,35 @@ extension Endpoint {
                 body: body
             )
         })
+    }
+}
+
+extension HTTPRequest {
+    func authorized(with credentials: AuthorizationCredentials) -> Self {
+        HTTPRequest(
+            host: host,
+            path: path,
+            method: method,
+            query: query,
+            headers: conditional({
+                var headers = self.headers
+
+                switch credentials {
+                case let AuthorizationCredentials.apiKey(apiKey):
+                    headers["X-Redmine-API-Key"] = apiKey
+
+                case let AuthorizationCredentials.basic(login: login, password: password):
+                    let token = [login, password]
+                        .joined(separator: ":")
+                        .data(using: String.Encoding.utf8)!
+                        .base64EncodedString()
+
+                    headers["Authorization"] = "Basic \(token)"
+                }
+
+                return headers
+            }),
+            body: body
+        )
     }
 }

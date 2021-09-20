@@ -37,7 +37,7 @@
 		F9D302A926F9192300D6DAF9 /* Endpoint+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */; };
 		F9D302AA26F9192300D6DAF9 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD526F7A0630022C19A /* Endpoint.swift */; };
 		F9D302AB26F9192300D6DAF9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EADC26F7A0BE0022C19A /* Models.swift */; };
-		F9D302AC26F9192300D6DAF9 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD726F7A0890022C19A /* Credentials.swift */; };
+		F9D302AC26F9192300D6DAF9 /* AuthorizationCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD726F7A0890022C19A /* AuthorizationCredentials.swift */; };
 		F9D302AD26F9193700D6DAF9 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
 		F9D302AE26F9193700D6DAF9 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -145,7 +145,7 @@
 /* Begin PBXFileReference section */
 		F913EAD226F751610022C19A /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		F913EAD526F7A0630022C19A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		F913EAD726F7A0890022C19A /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		F913EAD726F7A0890022C19A /* AuthorizationCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCredentials.swift; sourceTree = "<group>"; };
 		F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Factory.swift"; sourceTree = "<group>"; };
 		F913EADC26F7A0BE0022C19A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		F913EAE126F7BF690022C19A /* AnyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDictionary.swift; sourceTree = "<group>"; };
@@ -388,7 +388,7 @@
 			children = (
 				F913EADC26F7A0BE0022C19A /* Models.swift */,
 				F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */,
-				F913EAD726F7A0890022C19A /* Credentials.swift */,
+				F913EAD726F7A0890022C19A /* AuthorizationCredentials.swift */,
 				F913EAD526F7A0630022C19A /* Endpoint.swift */,
 				F9D3028E26F9191500D6DAF9 /* RedmineApi.h */,
 				F9D3028F26F9191500D6DAF9 /* Info.plist */,
@@ -773,7 +773,7 @@
 			files = (
 				F9D302AB26F9192300D6DAF9 /* Models.swift in Sources */,
 				F9D302AA26F9192300D6DAF9 /* Endpoint.swift in Sources */,
-				F9D302AC26F9192300D6DAF9 /* Credentials.swift in Sources */,
+				F9D302AC26F9192300D6DAF9 /* AuthorizationCredentials.swift in Sources */,
 				F9D302A926F9192300D6DAF9 /* Endpoint+Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
