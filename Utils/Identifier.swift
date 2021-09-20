@@ -1,5 +1,5 @@
 //
-//  ID.swift
+//  Identifier.swift
 //  RedmineClient
 //
 //  Created by Ernest Babayan on 19.09.2021.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol IdentifiableObject {
+public protocol IdentifiableObject {
     associatedtype RawIdentifier: Hashable = String
 
     typealias ID = Identifier<Self>
@@ -16,8 +16,8 @@ protocol IdentifiableObject {
     var id: ID { get }
 }
 
-struct Identifier<Entity: IdentifiableObject> {
-    let rawValue: Entity.RawIdentifier
+public struct Identifier<Entity: IdentifiableObject> {
+    public let rawValue: Entity.RawIdentifier
 
     init(rawValue: Entity.RawIdentifier) {
         self.rawValue = rawValue
@@ -25,5 +25,5 @@ struct Identifier<Entity: IdentifiableObject> {
 }
 
 extension Identifier: CustomStringConvertible {
-    var description: String { String(describing: rawValue) }
+    public var description: String { String(describing: rawValue) }
 }

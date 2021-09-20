@@ -7,22 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F913EAD126F6828C0022C19A /* ApiURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD026F6828C0022C19A /* ApiURLRequest.swift */; };
-		F913EAD326F751610022C19A /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD226F751610022C19A /* ID.swift */; };
-		F913EAD626F7A0630022C19A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD526F7A0630022C19A /* ApiEndpoint.swift */; };
-		F913EAD826F7A0890022C19A /* ApiCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD726F7A0890022C19A /* ApiCredentials.swift */; };
-		F913EADA26F7A0A20022C19A /* ApiEndpoint+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD926F7A0A20022C19A /* ApiEndpoint+Factory.swift */; };
-		F913EADD26F7A0BE0022C19A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EADC26F7A0BE0022C19A /* Models.swift */; };
-		F913EAE226F7BF690022C19A /* AnyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAE126F7BF690022C19A /* AnyDictionary.swift */; };
+		F95A4FC226F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */; };
+		F95A4FC626F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */; };
+		F95A4FFB26F915550097CE18 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A4FF926F915550097CE18 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F95A4FFE26F915550097CE18 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
+		F95A4FFF26F915550097CE18 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F95A500926F915700097CE18 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC326F914090097CE18 /* Result.swift */; };
+		F95A500A26F915700097CE18 /* AnyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAE126F7BF690022C19A /* AnyDictionary.swift */; };
+		F95A500B26F915700097CE18 /* ConditionalClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC726F914390097CE18 /* ConditionalClosure.swift */; };
+		F95A500C26F9158E0097CE18 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD226F751610022C19A /* Identifier.swift */; };
+		F95A502C26F916990097CE18 /* HTTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A502326F916990097CE18 /* HTTPClient.framework */; };
+		F95A503326F916990097CE18 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A503226F916990097CE18 /* HTTPClientTests.swift */; };
+		F95A503526F916990097CE18 /* HTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A502526F916990097CE18 /* HTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F95A503826F916990097CE18 /* HTTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A502326F916990097CE18 /* HTTPClient.framework */; };
+		F95A503926F916990097CE18 /* HTTPClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A502326F916990097CE18 /* HTTPClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F95A504026F916A00097CE18 /* HTTPFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC926F914570097CE18 /* HTTPFormData.swift */; };
+		F95A504126F916A00097CE18 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */; };
 		F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */; };
 		F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1EB26EBD93400D2B371 /* ContentView.swift */; };
 		F9C6F1EE26EBD93400D2B371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */; };
 		F9C6F1F126EBD93400D2B371 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C6F1F026EBD93400D2B371 /* Preview Assets.xcassets */; };
 		F9C6F1FC26EBD93400D2B371 /* RedmineClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1FB26EBD93400D2B371 /* RedmineClientTests.swift */; };
 		F9C6F20726EBD93400D2B371 /* RedmineClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F20626EBD93400D2B371 /* RedmineClientUITests.swift */; };
+		F9D3029526F9191500D6DAF9 /* RedmineApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3028C26F9191500D6DAF9 /* RedmineApi.framework */; };
+		F9D3029C26F9191500D6DAF9 /* RedmineApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D3029B26F9191500D6DAF9 /* RedmineApiTests.swift */; };
+		F9D3029E26F9191500D6DAF9 /* RedmineApi.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D3028E26F9191500D6DAF9 /* RedmineApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D302A126F9191500D6DAF9 /* RedmineApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3028C26F9191500D6DAF9 /* RedmineApi.framework */; };
+		F9D302A226F9191500D6DAF9 /* RedmineApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9D3028C26F9191500D6DAF9 /* RedmineApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9D302A926F9192300D6DAF9 /* Endpoint+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */; };
+		F9D302AA26F9192300D6DAF9 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD526F7A0630022C19A /* Endpoint.swift */; };
+		F9D302AB26F9192300D6DAF9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EADC26F7A0BE0022C19A /* Models.swift */; };
+		F9D302AC26F9192300D6DAF9 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD726F7A0890022C19A /* Credentials.swift */; };
+		F9D302AD26F9193700D6DAF9 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
+		F9D302AE26F9193700D6DAF9 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F95A4FFC26F915550097CE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F95A4FF626F915540097CE18;
+			remoteInfo = Utils;
+		};
+		F95A502D26F916990097CE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F95A502226F916990097CE18;
+			remoteInfo = HTTPClient;
+		};
+		F95A502F26F916990097CE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9C6F1E526EBD93400D2B371;
+			remoteInfo = RedmineClient;
+		};
+		F95A503626F916990097CE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F95A502226F916990097CE18;
+			remoteInfo = HTTPClient;
+		};
 		F9C6F1F826EBD93400D2B371 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
@@ -37,16 +85,87 @@
 			remoteGlobalIDString = F9C6F1E526EBD93400D2B371;
 			remoteInfo = RedmineClient;
 		};
+		F9D3029626F9191500D6DAF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9D3028B26F9191500D6DAF9;
+			remoteInfo = RedmineApi;
+		};
+		F9D3029826F9191500D6DAF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9C6F1E526EBD93400D2B371;
+			remoteInfo = RedmineClient;
+		};
+		F9D3029F26F9191500D6DAF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9D3028B26F9191500D6DAF9;
+			remoteInfo = RedmineApi;
+		};
+		F9D302AF26F9193700D6DAF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F95A4FF626F915540097CE18;
+			remoteInfo = Utils;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F95A4FEA26F9151F0097CE18 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F95A4FFF26F915550097CE18 /* Utils.framework in Embed Frameworks */,
+				F95A503926F916990097CE18 /* HTTPClient.framework in Embed Frameworks */,
+				F9D302A226F9191500D6DAF9 /* RedmineApi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D302B126F9193700D6DAF9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F9D302AE26F9193700D6DAF9 /* Utils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		F913EAD026F6828C0022C19A /* ApiURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiURLRequest.swift; sourceTree = "<group>"; };
-		F913EAD226F751610022C19A /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
-		F913EAD526F7A0630022C19A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
-		F913EAD726F7A0890022C19A /* ApiCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCredentials.swift; sourceTree = "<group>"; };
-		F913EAD926F7A0A20022C19A /* ApiEndpoint+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiEndpoint+Factory.swift"; sourceTree = "<group>"; };
+		F913EAD226F751610022C19A /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		F913EAD526F7A0630022C19A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F913EAD726F7A0890022C19A /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Factory.swift"; sourceTree = "<group>"; };
 		F913EADC26F7A0BE0022C19A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		F913EAE126F7BF690022C19A /* AnyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDictionary.swift; sourceTree = "<group>"; };
+		F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestFromApiEndpointBuilder.swift; sourceTree = "<group>"; };
+		F95A4FC326F914090097CE18 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFromHTTPRequestBuilder.swift; sourceTree = "<group>"; };
+		F95A4FC726F914390097CE18 /* ConditionalClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalClosure.swift; sourceTree = "<group>"; };
+		F95A4FC926F914570097CE18 /* HTTPFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFormData.swift; sourceTree = "<group>"; };
+		F95A4FDF26F9151F0097CE18 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		F95A4FE126F9151F0097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95A4FF726F915540097CE18 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95A4FF926F915550097CE18 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		F95A4FFA26F915550097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95A502326F916990097CE18 /* HTTPClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95A502526F916990097CE18 /* HTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		F95A502626F916990097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95A502B26F916990097CE18 /* HTTPClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95A503226F916990097CE18 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		F95A503426F916990097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C6F1E626EBD93400D2B371 /* RedmineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientApp.swift; sourceTree = "<group>"; };
 		F9C6F1EB26EBD93400D2B371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,13 +179,44 @@
 		F9C6F20626EBD93400D2B371 /* RedmineClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientUITests.swift; sourceTree = "<group>"; };
 		F9C6F20826EBD93400D2B371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C6F21426EBD9D500D2B371 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F9D3028C26F9191500D6DAF9 /* RedmineApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RedmineApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D3028E26F9191500D6DAF9 /* RedmineApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedmineApi.h; sourceTree = "<group>"; };
+		F9D3028F26F9191500D6DAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D3029426F9191500D6DAF9 /* RedmineApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D3029B26F9191500D6DAF9 /* RedmineApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineApiTests.swift; sourceTree = "<group>"; };
+		F9D3029D26F9191500D6DAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F95A4FF426F915540097CE18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A502026F916990097CE18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A502826F916990097CE18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F95A502C26F916990097CE18 /* HTTPClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9C6F1E326EBD93400D2B371 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95A4FFE26F915550097CE18 /* Utils.framework in Frameworks */,
+				F95A503826F916990097CE18 /* HTTPClient.framework in Frameworks */,
+				F9D302A126F9191500D6DAF9 /* RedmineApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,27 +234,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9D3028926F9191500D6DAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D302AD26F9193700D6DAF9 /* Utils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D3029126F9191500D6DAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D3029526F9191500D6DAF9 /* RedmineApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F913EAD426F7A0560022C19A /* Api */ = {
+		F95A4FC026F913BE0097CE18 /* Infrastracture */ = {
 			isa = PBXGroup;
 			children = (
-				F913EADC26F7A0BE0022C19A /* Models.swift */,
-				F913EAD026F6828C0022C19A /* ApiURLRequest.swift */,
-				F913EAD926F7A0A20022C19A /* ApiEndpoint+Factory.swift */,
-				F913EAD726F7A0890022C19A /* ApiCredentials.swift */,
-				F913EAD526F7A0630022C19A /* ApiEndpoint.swift */,
+				F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */,
+				F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */,
 			);
-			path = Api;
+			path = Infrastracture;
 			sourceTree = "<group>";
 		};
-		F913EAE026F7BF610022C19A /* Helpers */ = {
+		F95A4FDE26F9151F0097CE18 /* ApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				F913EAE126F7BF690022C19A /* AnyDictionary.swift */,
+				F95A4FDF26F9151F0097CE18 /* ApiTests.swift */,
+				F95A4FE126F9151F0097CE18 /* Info.plist */,
 			);
-			path = Helpers;
+			path = ApiTests;
+			sourceTree = "<group>";
+		};
+		F95A4FF826F915550097CE18 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F913EAD226F751610022C19A /* Identifier.swift */,
+				F913EAE126F7BF690022C19A /* AnyDictionary.swift */,
+				F95A4FC326F914090097CE18 /* Result.swift */,
+				F95A4FC726F914390097CE18 /* ConditionalClosure.swift */,
+				F95A4FF926F915550097CE18 /* Utils.h */,
+				F95A4FFA26F915550097CE18 /* Info.plist */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F95A500326F9155C0097CE18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F95A502426F916990097CE18 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */,
+				F95A4FC926F914570097CE18 /* HTTPFormData.swift */,
+				F95A502526F916990097CE18 /* HTTPClient.h */,
+				F95A502626F916990097CE18 /* Info.plist */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		F95A503126F916990097CE18 /* HTTPClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				F95A503226F916990097CE18 /* HTTPClientTests.swift */,
+				F95A503426F916990097CE18 /* Info.plist */,
+			);
+			path = HTTPClientTests;
 			sourceTree = "<group>";
 		};
 		F9C6F1DD26EBD93400D2B371 = {
@@ -113,7 +317,14 @@
 				F9C6F1E826EBD93400D2B371 /* RedmineClient */,
 				F9C6F1FA26EBD93400D2B371 /* RedmineClientTests */,
 				F9C6F20526EBD93400D2B371 /* RedmineClientUITests */,
+				F95A4FDE26F9151F0097CE18 /* ApiTests */,
+				F95A4FF826F915550097CE18 /* Utils */,
+				F95A502426F916990097CE18 /* HTTPClient */,
+				F95A503126F916990097CE18 /* HTTPClientTests */,
+				F9D3028D26F9191500D6DAF9 /* RedmineApi */,
+				F9D3029A26F9191500D6DAF9 /* RedmineApiTests */,
 				F9C6F1E726EBD93400D2B371 /* Products */,
+				F95A500326F9155C0097CE18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +334,11 @@
 				F9C6F1E626EBD93400D2B371 /* RedmineClient.app */,
 				F9C6F1F726EBD93400D2B371 /* RedmineClientTests.xctest */,
 				F9C6F20226EBD93400D2B371 /* RedmineClientUITests.xctest */,
+				F95A4FF726F915540097CE18 /* Utils.framework */,
+				F95A502326F916990097CE18 /* HTTPClient.framework */,
+				F95A502B26F916990097CE18 /* HTTPClientTests.xctest */,
+				F9D3028C26F9191500D6DAF9 /* RedmineApi.framework */,
+				F9D3029426F9191500D6DAF9 /* RedmineApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,15 +346,13 @@
 		F9C6F1E826EBD93400D2B371 /* RedmineClient */ = {
 			isa = PBXGroup;
 			children = (
-				F913EAE026F7BF610022C19A /* Helpers */,
-				F913EAD426F7A0560022C19A /* Api */,
+				F95A4FC026F913BE0097CE18 /* Infrastracture */,
 				F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */,
 				F9C6F1EB26EBD93400D2B371 /* ContentView.swift */,
 				F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */,
 				F9C6F1F226EBD93400D2B371 /* Info.plist */,
 				F9C6F1EF26EBD93400D2B371 /* Preview Content */,
 				F9C6F21426EBD9D500D2B371 /* README.md */,
-				F913EAD226F751610022C19A /* ID.swift */,
 			);
 			path = RedmineClient;
 			sourceTree = "<group>";
@@ -169,9 +383,113 @@
 			path = RedmineClientUITests;
 			sourceTree = "<group>";
 		};
+		F9D3028D26F9191500D6DAF9 /* RedmineApi */ = {
+			isa = PBXGroup;
+			children = (
+				F913EADC26F7A0BE0022C19A /* Models.swift */,
+				F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */,
+				F913EAD726F7A0890022C19A /* Credentials.swift */,
+				F913EAD526F7A0630022C19A /* Endpoint.swift */,
+				F9D3028E26F9191500D6DAF9 /* RedmineApi.h */,
+				F9D3028F26F9191500D6DAF9 /* Info.plist */,
+			);
+			path = RedmineApi;
+			sourceTree = "<group>";
+		};
+		F9D3029A26F9191500D6DAF9 /* RedmineApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9D3029B26F9191500D6DAF9 /* RedmineApiTests.swift */,
+				F9D3029D26F9191500D6DAF9 /* Info.plist */,
+			);
+			path = RedmineApiTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F95A4FF226F915540097CE18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F95A4FFB26F915550097CE18 /* Utils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A501E26F916990097CE18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F95A503526F916990097CE18 /* HTTPClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D3028726F9191500D6DAF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D3029E26F9191500D6DAF9 /* RedmineApi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		F95A4FF626F915540097CE18 /* Utils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F95A500026F915550097CE18 /* Build configuration list for PBXNativeTarget "Utils" */;
+			buildPhases = (
+				F95A4FF226F915540097CE18 /* Headers */,
+				F95A4FF326F915540097CE18 /* Sources */,
+				F95A4FF426F915540097CE18 /* Frameworks */,
+				F95A4FF526F915540097CE18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Utils;
+			productName = Utils;
+			productReference = F95A4FF726F915540097CE18 /* Utils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F95A502226F916990097CE18 /* HTTPClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F95A503A26F916990097CE18 /* Build configuration list for PBXNativeTarget "HTTPClient" */;
+			buildPhases = (
+				F95A501E26F916990097CE18 /* Headers */,
+				F95A501F26F916990097CE18 /* Sources */,
+				F95A502026F916990097CE18 /* Frameworks */,
+				F95A502126F916990097CE18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTTPClient;
+			productName = HTTPClient;
+			productReference = F95A502326F916990097CE18 /* HTTPClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F95A502A26F916990097CE18 /* HTTPClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F95A503D26F916990097CE18 /* Build configuration list for PBXNativeTarget "HTTPClientTests" */;
+			buildPhases = (
+				F95A502726F916990097CE18 /* Sources */,
+				F95A502826F916990097CE18 /* Frameworks */,
+				F95A502926F916990097CE18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F95A502E26F916990097CE18 /* PBXTargetDependency */,
+				F95A503026F916990097CE18 /* PBXTargetDependency */,
+			);
+			name = HTTPClientTests;
+			productName = HTTPClientTests;
+			productReference = F95A502B26F916990097CE18 /* HTTPClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F9C6F1E526EBD93400D2B371 /* RedmineClient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9C6F20B26EBD93400D2B371 /* Build configuration list for PBXNativeTarget "RedmineClient" */;
@@ -179,10 +497,14 @@
 				F9C6F1E226EBD93400D2B371 /* Sources */,
 				F9C6F1E326EBD93400D2B371 /* Frameworks */,
 				F9C6F1E426EBD93400D2B371 /* Resources */,
+				F95A4FEA26F9151F0097CE18 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F95A4FFD26F915550097CE18 /* PBXTargetDependency */,
+				F95A503726F916990097CE18 /* PBXTargetDependency */,
+				F9D302A026F9191500D6DAF9 /* PBXTargetDependency */,
 			);
 			name = RedmineClient;
 			productName = RedmineClient;
@@ -225,6 +547,45 @@
 			productReference = F9C6F20226EBD93400D2B371 /* RedmineClientUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F9D3028B26F9191500D6DAF9 /* RedmineApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9D302A326F9191500D6DAF9 /* Build configuration list for PBXNativeTarget "RedmineApi" */;
+			buildPhases = (
+				F9D3028726F9191500D6DAF9 /* Headers */,
+				F9D3028826F9191500D6DAF9 /* Sources */,
+				F9D3028926F9191500D6DAF9 /* Frameworks */,
+				F9D3028A26F9191500D6DAF9 /* Resources */,
+				F9D302B126F9193700D6DAF9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9D302B026F9193700D6DAF9 /* PBXTargetDependency */,
+			);
+			name = RedmineApi;
+			productName = RedmineApi;
+			productReference = F9D3028C26F9191500D6DAF9 /* RedmineApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F9D3029326F9191500D6DAF9 /* RedmineApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9D302A626F9191500D6DAF9 /* Build configuration list for PBXNativeTarget "RedmineApiTests" */;
+			buildPhases = (
+				F9D3029026F9191500D6DAF9 /* Sources */,
+				F9D3029126F9191500D6DAF9 /* Frameworks */,
+				F9D3029226F9191500D6DAF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9D3029726F9191500D6DAF9 /* PBXTargetDependency */,
+				F9D3029926F9191500D6DAF9 /* PBXTargetDependency */,
+			);
+			name = RedmineApiTests;
+			productName = RedmineApiTests;
+			productReference = F9D3029426F9191500D6DAF9 /* RedmineApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +595,16 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					F95A4FF626F915540097CE18 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F95A502226F916990097CE18 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F95A502A26F916990097CE18 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F9C6F1E526EBD93400D2B371;
+					};
 					F9C6F1E526EBD93400D2B371 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -242,6 +613,13 @@
 						TestTargetID = F9C6F1E526EBD93400D2B371;
 					};
 					F9C6F20126EBD93400D2B371 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F9C6F1E526EBD93400D2B371;
+					};
+					F9D3028B26F9191500D6DAF9 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F9D3029326F9191500D6DAF9 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = F9C6F1E526EBD93400D2B371;
 					};
@@ -263,11 +641,37 @@
 				F9C6F1E526EBD93400D2B371 /* RedmineClient */,
 				F9C6F1F626EBD93400D2B371 /* RedmineClientTests */,
 				F9C6F20126EBD93400D2B371 /* RedmineClientUITests */,
+				F95A4FF626F915540097CE18 /* Utils */,
+				F95A502226F916990097CE18 /* HTTPClient */,
+				F95A502A26F916990097CE18 /* HTTPClientTests */,
+				F9D3028B26F9191500D6DAF9 /* RedmineApi */,
+				F9D3029326F9191500D6DAF9 /* RedmineApiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F95A4FF526F915540097CE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A502126F916990097CE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A502926F916990097CE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9C6F1E426EBD93400D2B371 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,22 +695,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9D3028A26F9191500D6DAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D3029226F9191500D6DAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F95A4FF326F915540097CE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F95A500C26F9158E0097CE18 /* Identifier.swift in Sources */,
+				F95A500A26F915700097CE18 /* AnyDictionary.swift in Sources */,
+				F95A500B26F915700097CE18 /* ConditionalClosure.swift in Sources */,
+				F95A500926F915700097CE18 /* Result.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A501F26F916990097CE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F95A504026F916A00097CE18 /* HTTPFormData.swift in Sources */,
+				F95A504126F916A00097CE18 /* HTTPRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95A502726F916990097CE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F95A503326F916990097CE18 /* HTTPClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9C6F1E226EBD93400D2B371 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F913EAD326F751610022C19A /* ID.swift in Sources */,
-				F913EAD826F7A0890022C19A /* ApiCredentials.swift in Sources */,
-				F913EADA26F7A0A20022C19A /* ApiEndpoint+Factory.swift in Sources */,
-				F913EAE226F7BF690022C19A /* AnyDictionary.swift in Sources */,
-				F913EAD126F6828C0022C19A /* ApiURLRequest.swift in Sources */,
+				F95A4FC626F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift in Sources */,
+				F95A4FC226F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift in Sources */,
 				F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */,
 				F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */,
-				F913EAD626F7A0630022C19A /* ApiEndpoint.swift in Sources */,
-				F913EADD26F7A0BE0022C19A /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +767,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9D3028826F9191500D6DAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D302AB26F9192300D6DAF9 /* Models.swift in Sources */,
+				F9D302AA26F9192300D6DAF9 /* Endpoint.swift in Sources */,
+				F9D302AC26F9192300D6DAF9 /* Credentials.swift in Sources */,
+				F9D302A926F9192300D6DAF9 /* Endpoint+Factory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D3029026F9191500D6DAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D3029C26F9191500D6DAF9 /* RedmineApiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F95A4FFD26F915550097CE18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F95A4FF626F915540097CE18 /* Utils */;
+			targetProxy = F95A4FFC26F915550097CE18 /* PBXContainerItemProxy */;
+		};
+		F95A502E26F916990097CE18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F95A502226F916990097CE18 /* HTTPClient */;
+			targetProxy = F95A502D26F916990097CE18 /* PBXContainerItemProxy */;
+		};
+		F95A503026F916990097CE18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9C6F1E526EBD93400D2B371 /* RedmineClient */;
+			targetProxy = F95A502F26F916990097CE18 /* PBXContainerItemProxy */;
+		};
+		F95A503726F916990097CE18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F95A502226F916990097CE18 /* HTTPClient */;
+			targetProxy = F95A503626F916990097CE18 /* PBXContainerItemProxy */;
+		};
 		F9C6F1F926EBD93400D2B371 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F9C6F1E526EBD93400D2B371 /* RedmineClient */;
@@ -339,9 +819,175 @@
 			target = F9C6F1E526EBD93400D2B371 /* RedmineClient */;
 			targetProxy = F9C6F20326EBD93400D2B371 /* PBXContainerItemProxy */;
 		};
+		F9D3029726F9191500D6DAF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9D3028B26F9191500D6DAF9 /* RedmineApi */;
+			targetProxy = F9D3029626F9191500D6DAF9 /* PBXContainerItemProxy */;
+		};
+		F9D3029926F9191500D6DAF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9C6F1E526EBD93400D2B371 /* RedmineClient */;
+			targetProxy = F9D3029826F9191500D6DAF9 /* PBXContainerItemProxy */;
+		};
+		F9D302A026F9191500D6DAF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9D3028B26F9191500D6DAF9 /* RedmineApi */;
+			targetProxy = F9D3029F26F9191500D6DAF9 /* PBXContainerItemProxy */;
+		};
+		F9D302B026F9193700D6DAF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F95A4FF626F915540097CE18 /* Utils */;
+			targetProxy = F9D302AF26F9193700D6DAF9 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F95A500126F915550097CE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.Utils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F95A500226F915550097CE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.Utils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F95A503B26F916990097CE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HTTPClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.HTTPClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F95A503C26F916990097CE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HTTPClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.HTTPClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F95A503E26F916990097CE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HTTPClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.HTTPClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmineClient.app/RedmineClient";
+			};
+			name = Debug;
+		};
+		F95A503F26F916990097CE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HTTPClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.HTTPClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmineClient.app/RedmineClient";
+			};
+			name = Release;
+		};
 		F9C6F20926EBD93400D2B371 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,13 +1107,14 @@
 		F9C6F20C26EBD93400D2B371 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RedmineClient/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RedmineClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,13 +1129,14 @@
 		F9C6F20D26EBD93400D2B371 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RedmineClient/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RedmineClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,9 +1228,128 @@
 			};
 			name = Release;
 		};
+		F9D302A426F9191500D6DAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RedmineApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.RedmineApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F9D302A526F9191500D6DAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RedmineApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.RedmineApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9D302A726F9191500D6DAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RedmineApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.RedmineApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmineClient.app/RedmineClient";
+			};
+			name = Debug;
+		};
+		F9D302A826F9191500D6DAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RedmineApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernest0n.RedmineApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmineClient.app/RedmineClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F95A500026F915550097CE18 /* Build configuration list for PBXNativeTarget "Utils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F95A500126F915550097CE18 /* Debug */,
+				F95A500226F915550097CE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F95A503A26F916990097CE18 /* Build configuration list for PBXNativeTarget "HTTPClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F95A503B26F916990097CE18 /* Debug */,
+				F95A503C26F916990097CE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F95A503D26F916990097CE18 /* Build configuration list for PBXNativeTarget "HTTPClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F95A503E26F916990097CE18 /* Debug */,
+				F95A503F26F916990097CE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F9C6F1E126EBD93400D2B371 /* Build configuration list for PBXProject "RedmineClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -615,6 +1382,24 @@
 			buildConfigurations = (
 				F9C6F21226EBD93400D2B371 /* Debug */,
 				F9C6F21326EBD93400D2B371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9D302A326F9191500D6DAF9 /* Build configuration list for PBXNativeTarget "RedmineApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D302A426F9191500D6DAF9 /* Debug */,
+				F9D302A526F9191500D6DAF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9D302A626F9191500D6DAF9 /* Build configuration list for PBXNativeTarget "RedmineApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D302A726F9191500D6DAF9 /* Debug */,
+				F9D302A826F9191500D6DAF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

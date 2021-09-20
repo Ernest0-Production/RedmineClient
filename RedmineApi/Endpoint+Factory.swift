@@ -1,17 +1,19 @@
 //
-//  ApiEndpoint+Factory.swift
+//  Endpoint+Factory.swift
 //  RedmineClient
 //
 //  Created by Ernest Babayan on 19.09.2021.
 //
 
+import Utils
 
-extension ApiEndpoint {
+
+public extension Endpoint {
 
     // MARK: - PROJECTS
 
-    static func projects() -> ApiEndpoint {
-        ApiEndpoint(
+    static func projects() -> Endpoint {
+        Endpoint(
             path: "/projects.json",
 
             method: Method.get,
@@ -20,9 +22,9 @@ extension ApiEndpoint {
         )
     }
 
-    static func project(_ id: Project.ID) -> ApiEndpoint {
-        ApiEndpoint(
-            path: "/projects/\(id.rawValue).json",
+    static func project(_ id: Project.ID) -> Endpoint {
+        Endpoint(
+            path: "/projects/\(id).json",
 
             method: Method.get,
 
@@ -37,8 +39,8 @@ extension ApiEndpoint {
         homepage: String? = nil,
         isPublic: Bool,
         parentProject: Project.ID
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/projects.json",
 
             method: Method.post,
@@ -54,9 +56,9 @@ extension ApiEndpoint {
         )
     }
 
-    static func archivingProject(_ id: Project.ID) -> ApiEndpoint {
-        ApiEndpoint(
-            path: "/projects/\(id.rawValue)/archive.json",
+    static func archivingProject(_ id: Project.ID) -> Endpoint {
+        Endpoint(
+            path: "/projects/\(id)/archive.json",
 
             method: Method.put,
 
@@ -64,9 +66,9 @@ extension ApiEndpoint {
         )
     }
 
-    static func unarchivingProject(_ id: Project.ID) -> ApiEndpoint {
-        ApiEndpoint(
-            path: "/projects/\(id.rawValue)/unarchive.json",
+    static func unarchivingProject(_ id: Project.ID) -> Endpoint {
+        Endpoint(
+            path: "/projects/\(id)/unarchive.json",
 
             method: Method.put,
 
@@ -74,9 +76,9 @@ extension ApiEndpoint {
         )
     }
 
-    static func deleteProject(_ id: Project.ID) -> ApiEndpoint {
-        ApiEndpoint(
-            path: "/projects/\(id.rawValue).json",
+    static func deleteProject(_ id: Project.ID) -> Endpoint {
+        Endpoint(
+            path: "/projects/\(id).json",
 
             method: Method.delete,
 
@@ -86,8 +88,8 @@ extension ApiEndpoint {
 
     // MARK: - PROJECT MEMBERSHIPS
 
-    static func memberships(of project: Project.ID) -> ApiEndpoint {
-        ApiEndpoint(
+    static func memberships(of project: Project.ID) -> Endpoint {
+        Endpoint(
             path: "/memberships/\(project).json",
 
             method: Method.get,
@@ -100,8 +102,8 @@ extension ApiEndpoint {
         _ user: User.ID,
         role: User.Role.ID,
         in project: Project.ID
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/memberships/\(project).json",
 
             method: Method.post,
@@ -119,8 +121,8 @@ extension ApiEndpoint {
         _ user: User.ID,
         newRole: User.Role.ID,
         in project: Project.ID
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/memberships/\(project).json",
 
             method: Method.put,
@@ -136,8 +138,8 @@ extension ApiEndpoint {
 
     static func deleteMemberships(
         in project: Project.ID
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/memberships/\(project).json",
 
             method: Method.delete,
@@ -148,8 +150,8 @@ extension ApiEndpoint {
 
     // MARK: - ISSUES
 
-    static func issues() -> ApiEndpoint {
-        ApiEndpoint(
+    static func issues() -> Endpoint {
+        Endpoint(
             path: "/issues.json",
 
             method: Method.get,
@@ -158,8 +160,8 @@ extension ApiEndpoint {
         )
     }
 
-    static func issue(_ id: Issue.ID) -> ApiEndpoint {
-        ApiEndpoint(
+    static func issue(_ id: Issue.ID) -> Endpoint {
+        Endpoint(
             path: "/issues/\(id).json",
 
             method: Method.get,
@@ -179,8 +181,8 @@ extension ApiEndpoint {
         assignedUser: User.ID?,
         parentIssue: Issue.ID?,
         isPrivate: Bool
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/issues.json",
 
             method: Method.post,
@@ -200,8 +202,8 @@ extension ApiEndpoint {
         )
     }
 
-    static func deleteIssue(_ id: Issue.ID) -> ApiEndpoint {
-        ApiEndpoint(
+    static func deleteIssue(_ id: Issue.ID) -> Endpoint {
+        Endpoint(
             path: "/issues/\(id).json",
 
             method: Method.delete,
@@ -213,8 +215,8 @@ extension ApiEndpoint {
     static func addWatcher(
         _ user: User.ID,
         to issue: Issue.ID
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/issues/\(issue)/watchers.json",
 
             method: Method.post,
@@ -226,8 +228,8 @@ extension ApiEndpoint {
     static func deleteWatcher(
         _ user: User.ID,
         from issue: Issue.ID
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/issues/\(issue)/watchers/\(user).json",
 
             method: Method.delete,
@@ -238,8 +240,8 @@ extension ApiEndpoint {
 
     // MARK: - USERS
 
-    static func users() -> ApiEndpoint {
-        ApiEndpoint(
+    static func users() -> Endpoint {
+        Endpoint(
             path: "/users.json",
 
             method: Method.get,
@@ -257,8 +259,8 @@ extension ApiEndpoint {
         email: String,
         mustChangePassword: Bool,
         needSendInformation: Bool
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/users.json",
 
             method: Method.post,
@@ -279,8 +281,8 @@ extension ApiEndpoint {
         )
     }
 
-    static func currentUser() -> ApiEndpoint {
-        ApiEndpoint(
+    static func currentUser() -> Endpoint {
+        Endpoint(
             path: "/users/current.json",
 
             method: Method.get,
@@ -289,8 +291,8 @@ extension ApiEndpoint {
         )
     }
 
-    static func user(_ id: User.ID) -> ApiEndpoint {
-        ApiEndpoint(
+    static func user(_ id: User.ID) -> Endpoint {
+        Endpoint(
             path: "/users/\(id).json",
 
             method: Method.get,
@@ -309,8 +311,8 @@ extension ApiEndpoint {
         mustChangePassword: Bool? = nil,
         needSendInformation: Bool? = nil,
         admin: Bool? = nil
-    ) -> ApiEndpoint {
-        ApiEndpoint(
+    ) -> Endpoint {
+        Endpoint(
             path: "/users.json",
 
             method: Method.put,
@@ -333,8 +335,8 @@ extension ApiEndpoint {
         )
     }
 
-    static func deleteUser(_ id: User.ID) -> ApiEndpoint {
-        ApiEndpoint(
+    static func deleteUser(_ id: User.ID) -> Endpoint {
+        Endpoint(
             path: "/users/\(id).json",
 
             method: Method.delete,
