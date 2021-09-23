@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F93850A326FD2227001B2B51 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A226FD2227001B2B51 /* HTTPResponse.swift */; };
+		F93850A526FD22AF001B2B51 /* HTTPRequestSendingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */; };
+		F93850A726FD254E001B2B51 /* DeferredFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A626FD254E001B2B51 /* DeferredFuture.swift */; };
 		F95A4FC226F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */; };
 		F95A4FC626F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */; };
 		F95A4FFB26F915550097CE18 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A4FF926F915550097CE18 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +26,7 @@
 		F95A503926F916990097CE18 /* HTTPClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A502326F916990097CE18 /* HTTPClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F95A504026F916A00097CE18 /* HTTPFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC926F914570097CE18 /* HTTPFormData.swift */; };
 		F95A504126F916A00097CE18 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */; };
+		F9C2962A26FBAD3700F6A252 /* HTTPRequestSending.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2962926FBAD3700F6A252 /* HTTPRequestSending.swift */; };
 		F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */; };
 		F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1EB26EBD93400D2B371 /* ContentView.swift */; };
 		F9C6F1EE26EBD93400D2B371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C6F1ED26EBD93400D2B371 /* Assets.xcassets */; };
@@ -149,6 +153,9 @@
 		F913EAD926F7A0A20022C19A /* Endpoint+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Factory.swift"; sourceTree = "<group>"; };
 		F913EADC26F7A0BE0022C19A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		F913EAE126F7BF690022C19A /* AnyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDictionary.swift; sourceTree = "<group>"; };
+		F93850A226FD2227001B2B51 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestSendingError.swift; sourceTree = "<group>"; };
+		F93850A626FD254E001B2B51 /* DeferredFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredFuture.swift; sourceTree = "<group>"; };
 		F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestFromApiEndpointBuilder.swift; sourceTree = "<group>"; };
 		F95A4FC326F914090097CE18 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -166,6 +173,7 @@
 		F95A502B26F916990097CE18 /* HTTPClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95A503226F916990097CE18 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		F95A503426F916990097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C2962926FBAD3700F6A252 /* HTTPRequestSending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestSending.swift; sourceTree = "<group>"; };
 		F9C6F1E626EBD93400D2B371 /* RedmineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientApp.swift; sourceTree = "<group>"; };
 		F9C6F1EB26EBD93400D2B371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -280,6 +288,7 @@
 				F95A4FC726F914390097CE18 /* ConditionalClosure.swift */,
 				F95A4FF926F915550097CE18 /* Utils.h */,
 				F95A4FFA26F915550097CE18 /* Info.plist */,
+				F93850A626FD254E001B2B51 /* DeferredFuture.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -298,6 +307,9 @@
 				F95A4FC926F914570097CE18 /* HTTPFormData.swift */,
 				F95A502526F916990097CE18 /* HTTPClient.h */,
 				F95A502626F916990097CE18 /* Info.plist */,
+				F9C2962926FBAD3700F6A252 /* HTTPRequestSending.swift */,
+				F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */,
+				F93850A226FD2227001B2B51 /* HTTPResponse.swift */,
 			);
 			path = HTTPClient;
 			sourceTree = "<group>";
@@ -720,6 +732,7 @@
 				F95A500A26F915700097CE18 /* AnyDictionary.swift in Sources */,
 				F95A500B26F915700097CE18 /* ConditionalClosure.swift in Sources */,
 				F95A500926F915700097CE18 /* Result.swift in Sources */,
+				F93850A726FD254E001B2B51 /* DeferredFuture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +740,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93850A526FD22AF001B2B51 /* HTTPRequestSendingError.swift in Sources */,
+				F93850A326FD2227001B2B51 /* HTTPResponse.swift in Sources */,
 				F95A504026F916A00097CE18 /* HTTPFormData.swift in Sources */,
+				F9C2962A26FBAD3700F6A252 /* HTTPRequestSending.swift in Sources */,
 				F95A504126F916A00097CE18 /* HTTPRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

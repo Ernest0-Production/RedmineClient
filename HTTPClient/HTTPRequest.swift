@@ -5,9 +5,6 @@
 //  Created by Ernest Babayan on 20.09.2021.
 //
 
-import Foundation
-
-
 public struct HTTPRequest {
     public init(host: String, path: String, method: HTTPRequest.Method, query: [HTTPRequest.Query], headers: [String : String], body: Data?) {
         self.host = host
