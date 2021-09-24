@@ -7,5 +7,4 @@
 
 import Utils
 
-public typealias HTTPRequestSending = (HTTPRequest) -> DeferredFuture<HTTPResponse, HTTPRequestSendingError>
-
+public typealias HTTPRequestSending = (HTTPRequest, HTTPConnectionMode) -> DeferredFuture<HTTPResponse, HTTPRequestSendingError>
