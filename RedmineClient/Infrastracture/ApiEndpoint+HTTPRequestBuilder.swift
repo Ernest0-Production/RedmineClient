@@ -1,5 +1,5 @@
 //
-//  HTTPRequestFromApiEndpointBuilder.swift
+//  ApiEndpoint+HTTPRequestBuilder.swift
 //  RedmineClient
 //
 //  Created by Ernest Babayan on 20.09.2021.

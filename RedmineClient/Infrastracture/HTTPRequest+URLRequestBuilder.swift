@@ -1,5 +1,5 @@
 //
-//  URLRequestFromHTTPRequestBuilder.swift
+//  HTTPRequest+URLRequestBuilder.swift
 //  RedmineClient
 //
 //  Created by Ernest Babayan on 20.09.2021.

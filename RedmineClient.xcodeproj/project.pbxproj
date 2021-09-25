@@ -10,8 +10,8 @@
 		F93850A326FD2227001B2B51 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A226FD2227001B2B51 /* HTTPResponse.swift */; };
 		F93850A526FD22AF001B2B51 /* HTTPRequestSendingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */; };
 		F93850A726FD254E001B2B51 /* DeferredFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A626FD254E001B2B51 /* DeferredFuture.swift */; };
-		F95A4FC226F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */; };
-		F95A4FC626F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */; };
+		F95A4FC226F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC126F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift */; };
+		F95A4FC626F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC526F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift */; };
 		F95A4FFB26F915550097CE18 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A4FF926F915550097CE18 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F95A4FFE26F915550097CE18 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
 		F95A4FFF26F915550097CE18 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -157,8 +157,8 @@
 		F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestSendingError.swift; sourceTree = "<group>"; };
 		F93850A626FD254E001B2B51 /* DeferredFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredFuture.swift; sourceTree = "<group>"; };
 		F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-		F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestFromApiEndpointBuilder.swift; sourceTree = "<group>"; };
-		F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFromHTTPRequestBuilder.swift; sourceTree = "<group>"; };
+		F95A4FC126F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiEndpoint+HTTPRequestBuilder.swift"; sourceTree = "<group>"; };
+		F95A4FC526F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequest+URLRequestBuilder.swift"; sourceTree = "<group>"; };
 		F95A4FC726F914390097CE18 /* ConditionalClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalClosure.swift; sourceTree = "<group>"; };
 		F95A4FC926F914570097CE18 /* HTTPFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFormData.swift; sourceTree = "<group>"; };
 		F95A4FDF26F9151F0097CE18 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
@@ -264,8 +264,8 @@
 		F95A4FC026F913BE0097CE18 /* Infrastracture */ = {
 			isa = PBXGroup;
 			children = (
-				F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */,
-				F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */,
+				F95A4FC126F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift */,
+				F95A4FC526F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift */,
 			);
 			path = Infrastracture;
 			sourceTree = "<group>";
@@ -760,8 +760,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95A4FC626F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift in Sources */,
-				F95A4FC226F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift in Sources */,
+				F95A4FC626F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift in Sources */,
+				F95A4FC226F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift in Sources */,
 				F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */,
 				F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */,
 			);
