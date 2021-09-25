@@ -15,7 +15,6 @@
 		F95A4FFB26F915550097CE18 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A4FF926F915550097CE18 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F95A4FFE26F915550097CE18 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
 		F95A4FFF26F915550097CE18 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F95A500926F915700097CE18 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC326F914090097CE18 /* Result.swift */; };
 		F95A500A26F915700097CE18 /* AnyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAE126F7BF690022C19A /* AnyDictionary.swift */; };
 		F95A500B26F915700097CE18 /* ConditionalClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC726F914390097CE18 /* ConditionalClosure.swift */; };
 		F95A500C26F9158E0097CE18 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD226F751610022C19A /* Identifier.swift */; };
@@ -159,7 +158,6 @@
 		F93850A626FD254E001B2B51 /* DeferredFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredFuture.swift; sourceTree = "<group>"; };
 		F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		F95A4FC126F913F90097CE18 /* HTTPRequestFromApiEndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestFromApiEndpointBuilder.swift; sourceTree = "<group>"; };
-		F95A4FC326F914090097CE18 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F95A4FC526F914290097CE18 /* URLRequestFromHTTPRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFromHTTPRequestBuilder.swift; sourceTree = "<group>"; };
 		F95A4FC726F914390097CE18 /* ConditionalClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalClosure.swift; sourceTree = "<group>"; };
 		F95A4FC926F914570097CE18 /* HTTPFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFormData.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 			children = (
 				F913EAD226F751610022C19A /* Identifier.swift */,
 				F913EAE126F7BF690022C19A /* AnyDictionary.swift */,
-				F95A4FC326F914090097CE18 /* Result.swift */,
 				F95A4FC726F914390097CE18 /* ConditionalClosure.swift */,
 				F95A4FF926F915550097CE18 /* Utils.h */,
 				F95A4FFA26F915550097CE18 /* Info.plist */,
@@ -734,7 +731,6 @@
 				F95A500C26F9158E0097CE18 /* Identifier.swift in Sources */,
 				F95A500A26F915700097CE18 /* AnyDictionary.swift in Sources */,
 				F95A500B26F915700097CE18 /* ConditionalClosure.swift in Sources */,
-				F95A500926F915700097CE18 /* Result.swift in Sources */,
 				F93850A726FD254E001B2B51 /* DeferredFuture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
