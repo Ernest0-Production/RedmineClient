@@ -6,5 +6,6 @@
 //
 
 public enum HTTPRequestSendingError: Error {
-
+    case invalidRequest(Error)
+    case invalidResponse(Error)
 }

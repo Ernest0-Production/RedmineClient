@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F93850A326FD2227001B2B51 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A226FD2227001B2B51 /* HTTPResponse.swift */; };
 		F93850A526FD22AF001B2B51 /* HTTPRequestSendingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */; };
-		F93850A726FD254E001B2B51 /* DeferredFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93850A626FD254E001B2B51 /* DeferredFuture.swift */; };
 		F95A4FC226F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC126F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift */; };
 		F95A4FC626F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC526F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift */; };
 		F95A4FFB26F915550097CE18 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A4FF926F915550097CE18 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,9 +22,16 @@
 		F95A503526F916990097CE18 /* HTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F95A502526F916990097CE18 /* HTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F95A503826F916990097CE18 /* HTTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A502326F916990097CE18 /* HTTPClient.framework */; };
 		F95A503926F916990097CE18 /* HTTPClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A502326F916990097CE18 /* HTTPClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F95A504026F916A00097CE18 /* HTTPFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC926F914570097CE18 /* HTTPFormData.swift */; };
+		F95A504026F916A00097CE18 /* HTTPRequestBody+FormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FC926F914570097CE18 /* HTTPRequestBody+FormData.swift */; };
 		F95A504126F916A00097CE18 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */; };
-		F9B2A58726FE845E0024752D /* HTTPConnectionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B2A58626FE845E0024752D /* HTTPConnectionMode.swift */; };
+		F99127A8271228A400C836CB /* HTTPRequestBody+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99127A7271228A400C836CB /* HTTPRequestBody+JSON.swift */; };
+		F99127AA27122AD700C836CB /* Dictionary+Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99127A927122AD700C836CB /* Dictionary+Optionals.swift */; };
+		F99127AC27122BDA00C836CB /* HTTPRequest+AuthorizationCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99127AB27122BDA00C836CB /* HTTPRequest+AuthorizationCredentials.swift */; };
+		F99127AE27122D1400C836CB /* Transforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99127AD27122D1400C836CB /* Transforming.swift */; };
+		F99127AF27122DAE00C836CB /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
+		F99127B027122DAE00C836CB /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F99127B527122EF500C836CB /* HTTPResponse+StatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99127B427122EF500C836CB /* HTTPResponse+StatusCodes.swift */; };
+		F9B2A58926FF46770024752D /* URLSessionHTTPRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B2A58826FF46770024752D /* URLSessionHTTPRequestSender.swift */; };
 		F9C2962A26FBAD3700F6A252 /* HTTPRequestSending.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2962926FBAD3700F6A252 /* HTTPRequestSending.swift */; };
 		F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */; };
 		F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6F1EB26EBD93400D2B371 /* ContentView.swift */; };
@@ -44,6 +50,7 @@
 		F9D302AC26F9192300D6DAF9 /* AuthorizationCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913EAD726F7A0890022C19A /* AuthorizationCredentials.swift */; };
 		F9D302AD26F9193700D6DAF9 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; };
 		F9D302AE26F9193700D6DAF9 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F95A4FF726F915540097CE18 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9D41A5E26FF6FD70072A9A5 /* URLSession+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D41A5D26FF6FD70072A9A5 /* URLSession+Combine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +81,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F95A502226F916990097CE18;
 			remoteInfo = HTTPClient;
+		};
+		F99127B127122DAE00C836CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C6F1DE26EBD93400D2B371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F95A4FF626F915540097CE18;
+			remoteInfo = Utils;
 		};
 		F9C6F1F826EBD93400D2B371 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -133,6 +147,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F99127B327122DAE00C836CB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F99127B027122DAE00C836CB /* Utils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9D302B126F9193700D6DAF9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,14 +180,11 @@
 		F913EAE126F7BF690022C19A /* AnyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDictionary.swift; sourceTree = "<group>"; };
 		F93850A226FD2227001B2B51 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestSendingError.swift; sourceTree = "<group>"; };
-		F93850A626FD254E001B2B51 /* DeferredFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredFuture.swift; sourceTree = "<group>"; };
 		F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		F95A4FC126F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiEndpoint+HTTPRequestBuilder.swift"; sourceTree = "<group>"; };
 		F95A4FC526F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequest+URLRequestBuilder.swift"; sourceTree = "<group>"; };
 		F95A4FC726F914390097CE18 /* ConditionalClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalClosure.swift; sourceTree = "<group>"; };
-		F95A4FC926F914570097CE18 /* HTTPFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFormData.swift; sourceTree = "<group>"; };
-		F95A4FDF26F9151F0097CE18 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
-		F95A4FE126F9151F0097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95A4FC926F914570097CE18 /* HTTPRequestBody+FormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequestBody+FormData.swift"; sourceTree = "<group>"; };
 		F95A4FF726F915540097CE18 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95A4FF926F915550097CE18 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		F95A4FFA26F915550097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,7 +194,12 @@
 		F95A502B26F916990097CE18 /* HTTPClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95A503226F916990097CE18 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		F95A503426F916990097CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9B2A58626FE845E0024752D /* HTTPConnectionMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConnectionMode.swift; sourceTree = "<group>"; };
+		F99127A7271228A400C836CB /* HTTPRequestBody+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequestBody+JSON.swift"; sourceTree = "<group>"; };
+		F99127A927122AD700C836CB /* Dictionary+Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Optionals.swift"; sourceTree = "<group>"; };
+		F99127AB27122BDA00C836CB /* HTTPRequest+AuthorizationCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequest+AuthorizationCredentials.swift"; sourceTree = "<group>"; };
+		F99127AD27122D1400C836CB /* Transforming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transforming.swift; sourceTree = "<group>"; };
+		F99127B427122EF500C836CB /* HTTPResponse+StatusCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPResponse+StatusCodes.swift"; sourceTree = "<group>"; };
+		F9B2A58826FF46770024752D /* URLSessionHTTPRequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPRequestSender.swift; sourceTree = "<group>"; };
 		F9C2962926FBAD3700F6A252 /* HTTPRequestSending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestSending.swift; sourceTree = "<group>"; };
 		F9C6F1E626EBD93400D2B371 /* RedmineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C6F1E926EBD93400D2B371 /* RedmineClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineClientApp.swift; sourceTree = "<group>"; };
@@ -193,6 +220,7 @@
 		F9D3029426F9191500D6DAF9 /* RedmineApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D3029B26F9191500D6DAF9 /* RedmineApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineApiTests.swift; sourceTree = "<group>"; };
 		F9D3029D26F9191500D6DAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D41A5D26FF6FD70072A9A5 /* URLSession+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Combine.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99127AF27122DAE00C836CB /* Utils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,19 +293,13 @@
 		F95A4FC026F913BE0097CE18 /* Infrastracture */ = {
 			isa = PBXGroup;
 			children = (
+				F9D41A5C26FF6FD00072A9A5 /* Helpers */,
 				F95A4FC126F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift */,
+				F9B2A58826FF46770024752D /* URLSessionHTTPRequestSender.swift */,
 				F95A4FC526F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift */,
+				F99127AB27122BDA00C836CB /* HTTPRequest+AuthorizationCredentials.swift */,
 			);
 			path = Infrastracture;
-			sourceTree = "<group>";
-		};
-		F95A4FDE26F9151F0097CE18 /* ApiTests */ = {
-			isa = PBXGroup;
-			children = (
-				F95A4FDF26F9151F0097CE18 /* ApiTests.swift */,
-				F95A4FE126F9151F0097CE18 /* Info.plist */,
-			);
-			path = ApiTests;
 			sourceTree = "<group>";
 		};
 		F95A4FF826F915550097CE18 /* Utils */ = {
@@ -287,7 +310,8 @@
 				F95A4FC726F914390097CE18 /* ConditionalClosure.swift */,
 				F95A4FF926F915550097CE18 /* Utils.h */,
 				F95A4FFA26F915550097CE18 /* Info.plist */,
-				F93850A626FD254E001B2B51 /* DeferredFuture.swift */,
+				F99127A927122AD700C836CB /* Dictionary+Optionals.swift */,
+				F99127AD27122D1400C836CB /* Transforming.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -303,13 +327,14 @@
 			isa = PBXGroup;
 			children = (
 				F95A4FBE26F9139A0097CE18 /* HTTPRequest.swift */,
-				F95A4FC926F914570097CE18 /* HTTPFormData.swift */,
+				F95A4FC926F914570097CE18 /* HTTPRequestBody+FormData.swift */,
+				F99127A7271228A400C836CB /* HTTPRequestBody+JSON.swift */,
 				F95A502526F916990097CE18 /* HTTPClient.h */,
 				F95A502626F916990097CE18 /* Info.plist */,
 				F9C2962926FBAD3700F6A252 /* HTTPRequestSending.swift */,
-				F9B2A58626FE845E0024752D /* HTTPConnectionMode.swift */,
 				F93850A426FD22AF001B2B51 /* HTTPRequestSendingError.swift */,
 				F93850A226FD2227001B2B51 /* HTTPResponse.swift */,
+				F99127B427122EF500C836CB /* HTTPResponse+StatusCodes.swift */,
 			);
 			path = HTTPClient;
 			sourceTree = "<group>";
@@ -329,7 +354,6 @@
 				F9C6F1E826EBD93400D2B371 /* RedmineClient */,
 				F9C6F1FA26EBD93400D2B371 /* RedmineClientTests */,
 				F9C6F20526EBD93400D2B371 /* RedmineClientUITests */,
-				F95A4FDE26F9151F0097CE18 /* ApiTests */,
 				F95A4FF826F915550097CE18 /* Utils */,
 				F95A502426F916990097CE18 /* HTTPClient */,
 				F95A503126F916990097CE18 /* HTTPClientTests */,
@@ -417,6 +441,14 @@
 			path = RedmineApiTests;
 			sourceTree = "<group>";
 		};
+		F9D41A5C26FF6FD00072A9A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9D41A5D26FF6FD70072A9A5 /* URLSession+Combine.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -473,10 +505,12 @@
 				F95A501F26F916990097CE18 /* Sources */,
 				F95A502026F916990097CE18 /* Frameworks */,
 				F95A502126F916990097CE18 /* Resources */,
+				F99127B327122DAE00C836CB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F99127B227122DAE00C836CB /* PBXTargetDependency */,
 			);
 			name = HTTPClient;
 			productName = HTTPClient;
@@ -728,10 +762,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99127AA27122AD700C836CB /* Dictionary+Optionals.swift in Sources */,
+				F99127AE27122D1400C836CB /* Transforming.swift in Sources */,
 				F95A500C26F9158E0097CE18 /* Identifier.swift in Sources */,
 				F95A500A26F915700097CE18 /* AnyDictionary.swift in Sources */,
 				F95A500B26F915700097CE18 /* ConditionalClosure.swift in Sources */,
-				F93850A726FD254E001B2B51 /* DeferredFuture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,10 +776,11 @@
 			files = (
 				F93850A526FD22AF001B2B51 /* HTTPRequestSendingError.swift in Sources */,
 				F93850A326FD2227001B2B51 /* HTTPResponse.swift in Sources */,
-				F95A504026F916A00097CE18 /* HTTPFormData.swift in Sources */,
+				F99127A8271228A400C836CB /* HTTPRequestBody+JSON.swift in Sources */,
+				F95A504026F916A00097CE18 /* HTTPRequestBody+FormData.swift in Sources */,
 				F9C2962A26FBAD3700F6A252 /* HTTPRequestSending.swift in Sources */,
+				F99127B527122EF500C836CB /* HTTPResponse+StatusCodes.swift in Sources */,
 				F95A504126F916A00097CE18 /* HTTPRequest.swift in Sources */,
-				F9B2A58726FE845E0024752D /* HTTPConnectionMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,8 +798,11 @@
 			files = (
 				F95A4FC626F914290097CE18 /* HTTPRequest+URLRequestBuilder.swift in Sources */,
 				F95A4FC226F913F90097CE18 /* ApiEndpoint+HTTPRequestBuilder.swift in Sources */,
+				F9B2A58926FF46770024752D /* URLSessionHTTPRequestSender.swift in Sources */,
 				F9C6F1EC26EBD93400D2B371 /* ContentView.swift in Sources */,
+				F9D41A5E26FF6FD70072A9A5 /* URLSession+Combine.swift in Sources */,
 				F9C6F1EA26EBD93400D2B371 /* RedmineClientApp.swift in Sources */,
+				F99127AC27122BDA00C836CB /* HTTPRequest+AuthorizationCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +863,11 @@
 			isa = PBXTargetDependency;
 			target = F95A502226F916990097CE18 /* HTTPClient */;
 			targetProxy = F95A503626F916990097CE18 /* PBXContainerItemProxy */;
+		};
+		F99127B227122DAE00C836CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F95A4FF626F915540097CE18 /* Utils */;
+			targetProxy = F99127B127122DAE00C836CB /* PBXContainerItemProxy */;
 		};
 		F9C6F1F926EBD93400D2B371 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -44,7 +44,7 @@ extension HTTPRequest {
             request.setValue(value, forHTTPHeaderField: key)
         }
 
-        request.httpBody = body
+        request.httpBody = body?.data
 
         return Result.success(request)
     }

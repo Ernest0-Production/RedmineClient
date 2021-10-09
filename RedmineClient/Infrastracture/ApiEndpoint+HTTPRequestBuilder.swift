@@ -12,38 +12,14 @@ import Utils
 
 
 extension Endpoint {
-    enum HTTPRequestBuilderError: Error {
-        case invalidJson(Error)
-    }
-
-    func asHTTPRequest(domain: String) -> Result<HTTPRequest, HTTPRequestBuilderError> {
-        let body: Data?
-
-        switch task {
-        case Endpoint.Task.none, Endpoint.Task.query:
-            body = nil
-
-        case let Endpoint.Task.formData(dictionary):
-            body = HTTPFormData(dictionary.compactMapValues({ $0 }))
-
-        case let Endpoint.Task.json(dictionary):
-            do {
-                body = try JSONSerialization.data(
-                    withJSONObject: dictionary.compactMapValues({ $0 }),
-                    options: []
-                )
-            } catch {
-                return Result.failure(HTTPRequestBuilderError.invalidJson(error))
-            }
-        }
-
-        let request = HTTPRequest(
+    func asHTTPRequest(domain: String) -> HTTPRequest {
+        HTTPRequest(
             host: domain,
 
-            path: self.path,
+            path: path,
 
             method: conditional({
-                switch self.method {
+                switch method {
                 case Endpoint.Method.get: return HTTPRequest.Method.get
                 case Endpoint.Method.post: return HTTPRequest.Method.post
                 case Endpoint.Method.delete: return HTTPRequest.Method.delete
@@ -52,7 +28,7 @@ extension Endpoint {
             }),
 
             query: conditional({
-                guard case let Endpoint.Task.query(dictionary) = self.task else {
+                guard case let Endpoint.Task.query(dictionary) = task else {
                     return []
                 }
 
@@ -67,7 +43,7 @@ extension Endpoint {
             }),
 
             headers: conditional({
-                switch self.task {
+                switch task {
                 case Endpoint.Task.none, Endpoint.Task.query:
                     return [:]
 
@@ -79,39 +55,18 @@ extension Endpoint {
                 }
             }),
 
-            body: body
-        )
+            body: conditional({
+                switch task {
+                case Endpoint.Task.none, Endpoint.Task.query:
+                    return .none
 
-        return Result.success(request)
-    }
-}
+                case let Endpoint.Task.formData(dictionary):
+                    return .formData(dictionary.removingOptionalValues())
 
-extension HTTPRequest {
-    func authorized(with credentials: AuthorizationCredentials) -> Self {
-        HTTPRequest(
-            host: host,
-            path: path,
-            method: method,
-            query: query,
-            headers: conditional({
-                var headers = self.headers
-
-                switch credentials {
-                case let AuthorizationCredentials.apiKey(apiKey):
-                    headers["X-Redmine-API-Key"] = apiKey
-
-                case let AuthorizationCredentials.basic(login: login, password: password):
-                    let token = [login, password]
-                        .joined(separator: ":")
-                        .data(using: String.Encoding.utf8)!
-                        .base64EncodedString()
-
-                    headers["Authorization"] = "Basic \(token)"
+                case let Endpoint.Task.json(dictionary):
+                    return .json(dictionary.removingOptionalValues())
                 }
-
-                return headers
-            }),
-            body: body
+            })
         )
     }
 }
