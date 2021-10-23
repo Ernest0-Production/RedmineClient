@@ -21,29 +21,32 @@ struct AuthorizationView: View {
     private var host: String = ""
 
     var body: some View {
-        VStack {
-            HStack {
-                Text("Host: ")
-                Spacer()
-                TextField("http://redmine.ord-...", text: $host)
-            }.padding()
+        NavigationView {
+            VStack {
+                HStack {
+                    Text("Host: ")
+                    Spacer()
+                    TextField("http://your.redmine.workspace.com...", text: $host)
+                }.padding()
 
-            Picker("Authorization type", selection: $selectedIndex) {
-                ForEach(0..<strategies.count) { index in
-                    Text(strategies[index].title)
+                Picker("Authorization type", selection: $selectedIndex) {
+                    ForEach(0..<strategies.count) { index in
+                        Text(strategies[index].title)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(16)
+
+                Spacer()
+
+                GeometryReader { geometry in
+                    strategies[selectedIndex].contentView
+                        .frame(width: geometry.size.width,
+                               height: geometry.size.height,
+                               alignment: .top)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding(16)
-
-            Spacer()
-
-            GeometryReader { geometry in
-                strategies[selectedIndex].contentView
-                    .frame(width: geometry.size.width,
-                           height: geometry.size.height,
-                           alignment: .top)
-            }
+            .navigationTitle("Authorization")
         }
     }
 }
@@ -79,13 +82,25 @@ struct APIKeyAuthorizationFormView: View {
     @State var value: String = ""
 
     var body: some View {
-        TextField("Enter API-KEY...", text: $value)
-        .padding()
-        .background(Color(UIColor.systemGray6))
-        .cornerRadius(8)
-        .overlay(
-            RoundedRectangle(cornerRadius: 8).stroke(Color(UIColor.systemGray3), lineWidth: 1)
-        )
-        .padding()
+        VStack {
+            TextField("Enter API-KEY...", text: $value)
+                .padding()
+                .background(Color(UIColor.systemGray6))
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8).stroke(Color(UIColor.systemGray3), lineWidth: 0.5)
+                )
+                .padding()
+
+            Button("Enter", action: {
+                
+            })
+            .padding()
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .background(Color.accentColor)
+            .cornerRadius(8)
+            .padding()
+        }
     }
 }
